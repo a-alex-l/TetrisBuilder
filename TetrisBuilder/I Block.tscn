@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://graphics/Tetromino/Wooden Blocks.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 190, 0, 240, 60 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.0
+height = 50.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 5.0
+height = 50.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 115, 30 )
+
+[node name="I Block" type="Node2D"]
+position = Vector2( 120, 30 )
+
+[node name="I Block" type="KinematicBody2D" parent="."]
+
+[node name="I Block Sprite" type="Sprite" parent="I Block"]
+texture = SubResource( 1 )
+normal_map = ExtResource( 1 )
+region_rect = Rect2( 190, 0, 240, 60 )
+
+[node name="I Block Right Side" type="CollisionShape2D" parent="I Block"]
+position = Vector2( 115, 0 )
+shape = SubResource( 2 )
+one_way_collision_margin = 100.0
+
+[node name="I Block Left Side" type="CollisionShape2D" parent="I Block"]
+position = Vector2( -115, 0 )
+shape = SubResource( 3 )
+one_way_collision_margin = 100.0
+
+[node name="I Block Body" type="CollisionShape2D" parent="I Block"]
+shape = SubResource( 4 )
+one_way_collision_margin = 100.0

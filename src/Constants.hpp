@@ -1,0 +1,8 @@
+#ifndef GODOTENGINE_CONSTANTS_HPP
+#define GODOTENGINE_CONSTANTS_HPP
+
+const double gravity = 20;
+
+
+
+#endif //GODOTENGINE_CONSTANTS_HPP
