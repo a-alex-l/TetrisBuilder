@@ -8,15 +8,25 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "",
+"class": "BlockMove",
+"language": "NativeScript",
+"path": "res://bin/BlockMove.gdns"
+} ]
 _global_script_class_icons={
-
+"BlockMove": ""
 }
 
 [application]
 
-run/main_scene="res://main.tscn"
+config/name="TetrisBuilder"
+run/main_scene="res://scenes/main.tscn"
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.964706, 0.996078, 0.00392157, 1 )

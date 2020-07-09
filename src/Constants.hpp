@@ -1,8 +1,8 @@
 #ifndef GODOTENGINE_CONSTANTS_HPP
 #define GODOTENGINE_CONSTANTS_HPP
 
-const double gravity = 20;
-
-
+const double GRAVITY = 20;
+const double PI = 3.14159265358979323846264338327;
+const double MOVE_RADIUS = 150;
 
 #endif //GODOTENGINE_CONSTANTS_HPP

@@ -13,6 +13,8 @@ namespace godot {
     class GroundMove : public KinematicBody2D {
         GODOT_CLASS(GroundMove, KinematicBody2D)
 
+    private:
+
     public:
         static void _register_methods();
 
@@ -21,9 +23,12 @@ namespace godot {
 
         void _init();
 
-        String hello();
+        void _ready();
+
+        void _physics_process(double delta);
+
     };
 
-}
+};
 
 #endif //GODOTENGINE_GROUNDMOVE_HPP

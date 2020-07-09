@@ -3,7 +3,9 @@
 using namespace godot;
 
 void GroundMove::_register_methods() {
-    register_method("hello", &GroundMove::hello);
+    register_method("_init", &GroundMove::_init);
+    register_method("_ready", &GroundMove::_ready);
+    register_method("_physics_process", &GroundMove::_physics_process);
 }
 
 GroundMove::GroundMove() {}
@@ -12,7 +14,9 @@ GroundMove::~GroundMove() {}
 
 void GroundMove::_init() {}
 
-String GroundMove::hello() {
-    String ans = "Hello world! From Ground!";
-    return ans;
+void GroundMove::_ready() {
+    Godot::print("Hello from Ground!");
 }
+
+
+void GroundMove::_physics_process(double delta) {}
