@@ -15,6 +15,7 @@ namespace godot {
 
         int number_kinematic_now = -1;
         Node2D *Block_KinematicBody_Now;
+        Node2D *Level_KinematicBody;
         Levels level;
 
     public:
@@ -34,6 +35,8 @@ namespace godot {
         void remove_kinematic();
 
         void add_kinematic();
+
+        void quake();
 
     };
 

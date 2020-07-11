@@ -9,11 +9,10 @@
 class Levels {
 
     godot::Array Static_Scenes, Kinematic_Scenes, Rigid_Scenes;
-    godot::Array levels_static_objects{}, levels_kinematic_objects{}, levels_rigid_objects{};
-    godot::Array levels_static_objects_position{}, levels_kinematic_objects_position{};
+    godot::Ref <godot::PackedScene> level_scene;
 
-    void add_static(int block_number, int x, int y);
-    void add_kinematic(int block_number, int x, int y);
+    int level_number;
+    int count_kinematic_blocks[10] = {5, 7, 10, 15, 25, 35, 40, 50, 60, 70};
 
 public:
 
@@ -21,13 +20,9 @@ public:
 
     void load_scenes();
 
-    void load_level(int level_number, int width, int height);
+    void load_level(int level_number);
 
-    godot::Vector2 get_static_vector(int index);
-
-    godot::Vector2 get_kinematic_vector(int index);
-
-    godot::Ref <godot::PackedScene> get_static_object(int index);
+    godot::Ref <godot::PackedScene> get_level_object();
     godot::Ref <godot::PackedScene> get_kinematic_object(int index);
     godot::Ref <godot::PackedScene> get_rigid_object(int index);
 
