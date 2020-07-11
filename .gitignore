@@ -1,0 +1,10 @@
+.sconsign.dblite
+Godot.64
+SConstruct
+/godot-cpp/
+/TetrisBuilder/.import/
+/src/gdlibrary.os
+/src/BlockMove.os
+/src/BlocksManager.os
+/src/GroundMove.os
+/src/Levels.os

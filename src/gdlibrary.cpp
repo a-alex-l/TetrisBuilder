@@ -1,5 +1,7 @@
 #include "BlockMove.hpp"
 #include "GroundMove.hpp"
+#include "BlocksManager.hpp"
+#include "StrikeOutCollision.hpp"
 
 extern "C" void GDN_EXPORT godot_gdnative_init(godot_gdnative_init_options *o) {
     godot::Godot::gdnative_init(o);
@@ -14,4 +16,6 @@ extern "C" void GDN_EXPORT godot_nativescript_init(void *handle) {
 
     godot::register_class<godot::BlockMove>();
     godot::register_class<godot::GroundMove>();
+    godot::register_class<godot::BlocksManager>();
+    godot::register_class<godot::StrikeOutCollision>();
 }
