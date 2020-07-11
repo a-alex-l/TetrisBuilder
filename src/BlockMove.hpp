@@ -7,14 +7,12 @@
 
 namespace godot {
 
-    class BlocksManager;
-
     class BlockMove : public KinematicBody2D {
         GODOT_CLASS(BlockMove, KinematicBody2D)
 
     private:
 
-        bool follow_now = false;
+        int movement_phase = 0;
         double falling_line = 0;
         Vector2 following_position = Vector2(-239, -239);
 

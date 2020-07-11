@@ -28,15 +28,20 @@ void BlockMove::_ready() {
 
 void BlockMove::_input(InputEvent *input) {
     if (InputEventScreenTouch *input_touch = cast_to<InputEventScreenTouch>(input)) {
-        Godot::print(String("BLock ") + String(get_global_position()) + String(" Touch") + String(input_touch->get_position()));
-        if ((get_global_position() - input_touch->get_position()).length() < MOVE_RADIUS) {
-            following_position = input_touch->get_position();
+        switch(movement_phase) {
+            case 0:
+                if ((get_global_position() - input_touch->get_position()).length() < MOVE_RADIUS)
+                    movement_phase++;
+                break;
+            case 1:
+                movement_phase++;
+                (cast_to<BlocksManager>(get_parent()->get_parent()))->remove_kinematic();
+                break;
         }
     }
     if (InputEventScreenDrag *input_drag = cast_to<InputEventScreenDrag>(input)) {
-        if ((following_position - input_drag->get_position()).length() < MOVE_RADIUS) {
+        if (movement_phase == 1)
             following_position = input_drag->get_position();
-        }
     }
 }
 
@@ -44,10 +49,6 @@ void BlockMove::_physics_process(double delta) {
     falling_line += GRAVITY * delta;
     if (following_position.y < falling_line) {
         following_position.y = falling_line;
-    }
-    if (is_on_floor() || is_on_wall()) {
-        (cast_to<BlocksManager>(get_parent()->get_parent()))->remove_kinematic();
-        return;
     }
     move_and_slide((following_position - get_global_position()) * 20, Vector2(0, 0), false, 4, PI/4.0, false);
 }
