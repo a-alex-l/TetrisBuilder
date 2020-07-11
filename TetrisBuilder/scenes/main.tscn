@@ -26,4 +26,5 @@ shape = SubResource( 1 )
 [node name="Collision Bottom" type="CollisionShape2D" parent="Trigger"]
 position = Vector2( 0, 2000 )
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]

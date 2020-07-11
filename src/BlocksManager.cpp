@@ -25,7 +25,6 @@ void BlocksManager::_init() {}
 void BlocksManager::_ready() {
     Godot::print("Hello from Manager!");
     level.load_scenes();
-    _create_level(0);
 }
 
 void BlocksManager::_create_level(int level_number) {
