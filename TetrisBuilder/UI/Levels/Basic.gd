@@ -10,5 +10,7 @@ func _ready():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 func _on_Button_pressed(scene_to_load):
-	get_tree().change_scene(scene_to_load)
-	get_tree().get_root().get_node("MainScene*").get_node("Enemy")
+	$MarginContainer.hide()
+	$GUI.show()
+	$Zero._create_level(scene_to_load)
+	#get_tree().change_scene(scene_to_load)
