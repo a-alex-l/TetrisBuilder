@@ -12,6 +12,7 @@ func _ready():
 func _on_Button_pressed(scene_to_load):
 	$MarginContainer.hide()
 	$GUI.show()
+	$Zero.show()
 	$Zero._create_level(scene_to_load)
 	#get_tree().change_scene(scene_to_load)
 

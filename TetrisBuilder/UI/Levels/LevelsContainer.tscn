@@ -1,0 +1,182 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://UI/Levels/Level1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/Levels/Level2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Levels/Level3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Levels/Level4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/Levels/Level5.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Levels/Level6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Levels/Level7.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Levels/Level8.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/Levels/Level9.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/Levels/Level10.tscn" type="PackedScene" id=10]
+[ext_resource path="res://graphics/Interface/lifebar_fill.png" type="Texture" id=11]
+[ext_resource path="res://graphics/Interface/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 20, 20, 10, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 12 )
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -520.0
+margin_top = -280.0
+margin_right = 520.0
+margin_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 1040, 560 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1040.0
+margin_bottom = 560.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 50
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_right = 1040.0
+margin_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 18
+custom_constants/hseparation = 18
+columns = 5
+
+[node name="Level1" parent="VBoxContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 193.0
+margin_bottom = 191.0
+scene_to_load = "0"
+
+[node name="Level2" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
+margin_left = 211.0
+margin_right = 404.0
+margin_bottom = 191.0
+size_flags_vertical = 1
+scene_to_load = "1"
+
+[node name="Level3" parent="VBoxContainer/GridContainer" instance=ExtResource( 3 )]
+margin_left = 422.0
+margin_right = 615.0
+margin_bottom = 191.0
+scene_to_load = "2"
+
+[node name="Level4" parent="VBoxContainer/GridContainer" instance=ExtResource( 4 )]
+margin_left = 633.0
+margin_right = 826.0
+margin_bottom = 191.0
+scene_to_load = "3"
+
+[node name="Level5" parent="VBoxContainer/GridContainer" instance=ExtResource( 5 )]
+margin_left = 844.0
+margin_right = 1037.0
+margin_bottom = 191.0
+scene_to_load = "4"
+
+[node name="Level6" parent="VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_top = 209.0
+margin_right = 193.0
+margin_bottom = 400.0
+scene_to_load = "5"
+
+[node name="Level7" parent="VBoxContainer/GridContainer" instance=ExtResource( 7 )]
+margin_left = 211.0
+margin_top = 209.0
+margin_right = 404.0
+margin_bottom = 400.0
+scene_to_load = "6"
+
+[node name="Level8" parent="VBoxContainer/GridContainer" instance=ExtResource( 8 )]
+margin_left = 422.0
+margin_top = 209.0
+margin_right = 615.0
+margin_bottom = 400.0
+scene_to_load = "7"
+
+[node name="Level9" parent="VBoxContainer/GridContainer" instance=ExtResource( 9 )]
+margin_left = 633.0
+margin_top = 209.0
+margin_right = 826.0
+margin_bottom = 400.0
+scene_to_load = "8"
+
+[node name="Level10" parent="VBoxContainer/GridContainer" instance=ExtResource( 10 )]
+margin_left = 844.0
+margin_top = 209.0
+margin_right = 1037.0
+margin_bottom = 400.0
+scene_to_load = "9"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 450.0
+margin_right = 1040.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 195.0
+margin_right = 495.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 300, 110 )
+texture_normal = SubResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 300, 110 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.960784, 0.4, 0.0627451, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LAST"
+align = 1
+valign = 1
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 545.0
+margin_right = 845.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 300, 110 )
+texture_normal = SubResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton2"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 300, 110 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.960784, 0.4, 0.0627451, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "NEXT"
+align = 1
+valign = 1
+
