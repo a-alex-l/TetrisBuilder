@@ -10,6 +10,9 @@ namespace godot {
         GODOT_CLASS(StrikeOutCollision, Area2D)
 
     private:
+
+        int count_fallen_blocks = 0;
+
     public:
         static void _register_methods();
 
@@ -18,9 +21,11 @@ namespace godot {
 
         void _init();
 
+        void _ready();
+
         void _on_Trigger_body_entered(Variant body);
 
-        void _ready();
+        int get_count_fallen_blocks();
 
     };
 

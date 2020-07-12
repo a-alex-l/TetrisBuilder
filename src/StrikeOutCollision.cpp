@@ -17,9 +17,14 @@ StrikeOutCollision::~StrikeOutCollision() {}
 void StrikeOutCollision::_init() {}
 
 void StrikeOutCollision::_on_Trigger_body_entered(Variant body) {
+    count_fallen_blocks++;
     get_parent()->remove_child(((Node2D*)body)->get_parent());
 }
 
 void StrikeOutCollision::_ready() {
     Godot::print("Hello from StrikeOut!");
+}
+
+int StrikeOutCollision::get_count_fallen_blocks() {
+    return count_fallen_blocks;
 }

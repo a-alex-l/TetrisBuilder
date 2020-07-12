@@ -12,7 +12,7 @@ class Levels {
     godot::Ref <godot::PackedScene> level_scene;
 
     int level_number;
-    int count_kinematic_blocks[10] = {5, 7, 10, 15, 25, 35, 40, 50, 60, 70};
+    int count_kinematic_blocks[10] = {3, 5, 8, 13, 21, 34, 55, 89, 144, 233};
 
 public:
 
@@ -26,9 +26,7 @@ public:
     godot::Ref <godot::PackedScene> get_kinematic_object(int index);
     godot::Ref <godot::PackedScene> get_rigid_object(int index);
 
-    int get_count_static();
-
-    int kinematic_size();
+    int get_kinematic_size();
 
 };
 
