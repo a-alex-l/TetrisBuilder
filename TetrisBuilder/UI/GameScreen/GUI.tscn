@@ -4,10 +4,9 @@
 [ext_resource path="res://UI/GameScreen/EnergyBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/GameScreen/BombCounter.tscn" type="PackedScene" id=3]
 
-
 [node name="GUI" type="MarginContainer"]
 anchor_right = 1.0
-margin_bottom = 139.0
+margin_bottom = 137.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -17,11 +16,11 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1260.0
-margin_bottom = 119.0
+margin_bottom = 117.0
 
 [node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
 margin_right = 1136.0
-margin_bottom = 99.0
+margin_bottom = 97.0
 size_flags_horizontal = 3
 
 [node name="Bar" parent="HBoxContainer/Bars" instance=ExtResource( 1 )]
@@ -34,9 +33,9 @@ margin_bottom = 97.0
 
 [node name="Counters" type="HBoxContainer" parent="HBoxContainer"]
 margin_left = 1140.0
-margin_top = 29.0
+margin_top = 28.0
 margin_right = 1240.0
-margin_bottom = 69.0
+margin_bottom = 68.0
 size_flags_vertical = 4
 
 [node name="BombCounter" parent="HBoxContainer/Counters" instance=ExtResource( 3 )]

@@ -27,11 +27,9 @@ run/main_scene="res://UI/TitleScreen/MainWindow.tscn"
 
 window/size/width=1280
 window/size/height=720
+window/size/test_width=1883
+window/size/test_height=510
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-
-[rendering]
-
-environment/default_clear_color=Color( 0.964706, 0.996078, 0.00392157, 1 )
