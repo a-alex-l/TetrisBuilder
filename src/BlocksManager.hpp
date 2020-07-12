@@ -25,18 +25,23 @@ namespace godot {
         ~BlocksManager();
 
         void _init();
-
         void _ready();
+        void _physics_process(double delta);
 
         void _create_level(int level_number);
 
-        void _physics_process(double delta);
-
         void remove_kinematic();
-
         void add_kinematic();
 
         void quake();
+
+        int get_count_of_remaining_blocks();
+        int get_count_fallen_blocks();
+        double get_score_now();
+
+        void turn_kinematic_left();
+        void turn_kinematic_right();
+
 
     };
 
