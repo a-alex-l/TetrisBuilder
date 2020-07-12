@@ -2,8 +2,7 @@
 
 [ext_resource path="res://scenes/Stony Ground.tscn" type="PackedScene" id=1]
 
-
-[node name="Level 1" type="Node2D"]
+[node name="Level 0" type="Node2D"]
 
 [node name="Stony Ground 1" parent="." instance=ExtResource( 1 )]
 position = Vector2( -150, -60 )

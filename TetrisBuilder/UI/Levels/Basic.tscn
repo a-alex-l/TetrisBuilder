@@ -18,12 +18,12 @@
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 11 )
 region = Rect2( 20, 20, 10, 10 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 60
-font_data = ExtResource( 13 )
+font_data = ExtResource( 12 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -53,53 +53,53 @@ columns = 5
 [node name="Level1" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 2 )]
 scene_to_load = "0"
 
-[node name="Level2" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 3 )]
+[node name="Level2" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 208.0
 margin_right = 398.0
 scene_to_load = "1"
 
-[node name="Level3" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 4 )]
+[node name="Level3" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 3 )]
 margin_left = 416.0
 margin_right = 606.0
 scene_to_load = "2"
 
-[node name="Level4" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 5 )]
+[node name="Level4" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 4 )]
 margin_left = 624.0
 margin_right = 814.0
 scene_to_load = "3"
 
-[node name="Level5" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+[node name="Level5" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 5 )]
 margin_left = 832.0
 margin_right = 1022.0
 scene_to_load = "4"
 
-[node name="Level6" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 7 )]
+[node name="Level6" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
 margin_top = 208.0
 margin_bottom = 398.0
 scene_to_load = "5"
 
-[node name="Level7" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 8 )]
+[node name="Level7" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 7 )]
 margin_left = 208.0
 margin_top = 208.0
 margin_right = 398.0
 margin_bottom = 398.0
 scene_to_load = "6"
 
-[node name="Level8" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 9 )]
+[node name="Level8" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 8 )]
 margin_left = 416.0
 margin_top = 208.0
 margin_right = 606.0
 margin_bottom = 398.0
 scene_to_load = "7"
 
-[node name="Level9" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 10 )]
+[node name="Level9" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 9 )]
 margin_left = 624.0
 margin_top = 208.0
 margin_right = 814.0
 margin_bottom = 398.0
 scene_to_load = "8"
 
-[node name="Level10" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 11 )]
+[node name="Level10" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource( 10 )]
 margin_left = 832.0
 margin_top = 208.0
 margin_right = 1022.0
@@ -166,4 +166,3 @@ visible = false
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
 visible = false
-
