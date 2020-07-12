@@ -20,9 +20,18 @@ _global_script_class_icons={
 
 [application]
 
+config/name="TetrisBuilder"
 run/main_scene="res://UI/TitleScreen/MainWindow.tscn"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.964706, 0.996078, 0.00392157, 1 )

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Stony Ground.tscn" type="PackedScene" id=1]
+
+[node name="Level 7" type="Node2D"]
+
+[node name="Stony Ground 1" parent="." instance=ExtResource( 1 )]
+position = Vector2( -150, -120 )
+
+[node name="Stony Ground 2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -90, -120 )
+
+[node name="Stony Ground 3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -30, -120 )
+
+[node name="Stony Ground 4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 30, -60 )
+
+[node name="Stony Ground 5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 90, -120 )

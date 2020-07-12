@@ -27,6 +27,9 @@ anchor_bottom = 1.0
 margin_right = 7.0
 margin_bottom = 2.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Menu" type="MarginContainer" parent="."]
 margin_left = 120.0
@@ -104,4 +107,3 @@ texture = ExtResource( 6 )
 
 [node name="FadeIn" parent="." instance=ExtResource( 7 )]
 visible = false
-

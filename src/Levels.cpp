@@ -38,7 +38,7 @@ Ref <PackedScene> Levels::get_rigid_object(int index) {
     return Rigid_Scenes[hash(index)];
 }
 
-int Levels::kinematic_size() {
+int Levels::get_kinematic_size() {
     return count_kinematic_blocks[level_number];
 }
 
