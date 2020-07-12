@@ -26,6 +26,8 @@ run/main_scene="res://UI/TitleScreen/MainWindow.tscn"
 
 window/size/width=1280
 window/size/height=720
+window/size/test_width=1497
+window/size/test_height=706
 
 [input_devices]
 
