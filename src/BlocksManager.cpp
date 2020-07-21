@@ -17,6 +17,11 @@ void BlocksManager::_register_methods() {
     register_method("_physics_process", &BlocksManager::_physics_process);
     register_method("remove_kinematic", &BlocksManager::remove_kinematic);
     register_method("add_kinematic", &BlocksManager::add_kinematic);
+    register_method("get_count_of_remaining_blocks", &BlocksManager::get_count_of_remaining_blocks);
+    register_method("get_count_fallen_blocks", &BlocksManager::get_count_fallen_blocks);
+    register_method("get_score_now", &BlocksManager::get_score_now);
+    register_method("turn_kinematic_left", &BlocksManager::turn_kinematic_left);
+    register_method("turn_kinematic_right", &BlocksManager::turn_kinematic_right);
 }
 
 BlocksManager::BlocksManager() {}
@@ -79,7 +84,7 @@ int BlocksManager::get_count_fallen_blocks() {
 
 double BlocksManager::get_score_now() {
     double score = 100;
-    return score * pow(1.01, get_count_of_remaining_blocks()) * pow(0.5, get_count_fallen_blocks());
+    return score * pow(1.01, number_kinematic_now) * pow(0.5, get_count_fallen_blocks());
 }
 
 void BlocksManager::turn_kinematic_left() {
