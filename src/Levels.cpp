@@ -28,7 +28,7 @@ Ref <PackedScene> Levels::get_level_object() {
     return level_scene;
 }
 
-static int hash(int index) { return 9 * index * index % 7; }
+static int hash(int index) { return (5 * index + 2) % 7; }
 
 Ref <PackedScene> Levels::get_kinematic_object(int index) {
     return Kinematic_Scenes[hash(index)];

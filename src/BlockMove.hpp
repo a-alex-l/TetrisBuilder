@@ -12,7 +12,7 @@ namespace godot {
 
     private:
 
-        int movement_phase = 0;
+        int movement_phase = 0; // 0-nothing, 1-block move, 2-camera move
         double falling_line = 0;
         Vector2 following_position = Vector2(-239, -239);
 
