@@ -18,7 +18,6 @@ extents = Vector2( 60, 55 )
 [node name="Block 0" type="Node2D"]
 
 [node name="Block 0" type="RigidBody2D" parent="."]
-position = Vector2( 60, 60 )
 mass = 4.0
 physics_material_override = ExtResource( 2 )
 

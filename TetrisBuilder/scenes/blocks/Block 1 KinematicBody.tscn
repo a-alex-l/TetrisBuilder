@@ -10,17 +10,16 @@ region = Rect2( 190, 0, 240, 60 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.0
-height = 50.0
+height = 48.0
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 5.0
-height = 50.0
+height = 48.0
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 115, 30 )
+extents = Vector2( 114, 29 )
 
 [node name="Block 1" type="Node2D"]
-position = Vector2( 120, 30 )
 
 [node name="Block 1" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
@@ -31,18 +30,15 @@ normal_map = ExtResource( 1 )
 region_rect = Rect2( 190, 0, 240, 60 )
 
 [node name="Block 1 Right Side" type="CollisionShape2D" parent="Block 1"]
-position = Vector2( 115, 0 )
-scale = Vector2( 0.99, 0.99 )
+position = Vector2( 114, 0 )
 shape = SubResource( 2 )
 one_way_collision_margin = 100.0
 
 [node name="Block 1 Left Side" type="CollisionShape2D" parent="Block 1"]
-position = Vector2( -115, 0 )
-scale = Vector2( 0.975, 0.975 )
+position = Vector2( -114, 0 )
 shape = SubResource( 3 )
 one_way_collision_margin = 100.0
 
 [node name="Block 1 Body" type="CollisionShape2D" parent="Block 1"]
-scale = Vector2( 0.975, 0.975 )
 shape = SubResource( 4 )
 one_way_collision_margin = 100.0

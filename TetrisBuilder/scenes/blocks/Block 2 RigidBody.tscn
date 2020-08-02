@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://graphics/Tetromino/Wooden Blocks.png" type="Texture" id=1]
-[ext_resource path="res://Block Physics Material.tres" type="PhysicsMaterial" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -27,36 +26,35 @@ extents = Vector2( 85, 30 )
 extents = Vector2( 30, 27.5 )
 
 [node name="T Block" type="Node2D"]
-position = Vector2( 90, 60 )
 
 [node name="T Block" type="RigidBody2D" parent="."]
-physics_material_override = ExtResource( 2 )
 
 [node name="T Block Sprite" type="Sprite" parent="T Block"]
+position = Vector2( 0, 15 )
 texture = SubResource( 1 )
 
 [node name="T Block Right Side" type="CollisionShape2D" parent="T Block"]
-position = Vector2( 85, -30 )
+position = Vector2( 85, -15 )
 shape = SubResource( 2 )
 one_way_collision_margin = 100.0
 
 [node name="T Block Left Side" type="CollisionShape2D" parent="T Block"]
-position = Vector2( -85, -30 )
+position = Vector2( -85, -15 )
 shape = SubResource( 3 )
 one_way_collision_margin = 100.0
 
 [node name="T Block Bottom Side" type="CollisionShape2D" parent="T Block"]
-position = Vector2( 0, 55 )
+position = Vector2( 0, 70 )
 rotation = 1.5708
 shape = SubResource( 4 )
 one_way_collision_margin = 100.0
 
 [node name="T Block Up Body" type="CollisionShape2D" parent="T Block"]
-position = Vector2( 0, -30 )
+position = Vector2( 0, -15 )
 shape = SubResource( 5 )
 one_way_collision_margin = 100.0
 
 [node name="Down Body" type="CollisionShape2D" parent="T Block"]
-position = Vector2( 0, 27.5 )
+position = Vector2( 0, 42.5 )
 shape = SubResource( 6 )
 one_way_collision_margin = 100.0

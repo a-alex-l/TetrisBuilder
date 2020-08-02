@@ -23,7 +23,6 @@ extents = Vector2( 30, 55 )
 extents = Vector2( 30, 55 )
 
 [node name="Block 5" type="Node2D"]
-position = Vector2( 60, 90 )
 
 [node name="Block 5" type="RigidBody2D" parent="."]
 physics_material_override = ExtResource( 1 )
