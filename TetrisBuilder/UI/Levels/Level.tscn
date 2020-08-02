@@ -11,7 +11,7 @@ font_data = ExtResource( 3 )
 [node name="Level1" type="TextureButton"]
 margin_right = 190.0
 margin_bottom = 190.0
-rect_min_size = Vector2( 190, 190 )
+rect_min_size = Vector2( 140, 140 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 1 )

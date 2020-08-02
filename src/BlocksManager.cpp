@@ -92,7 +92,8 @@ int BlocksManager::get_count_fallen_blocks() {
 }
 
 double BlocksManager::get_score_now() {
-    return number_kinematic_now * pow(0.5, get_count_fallen_blocks());
+    double score = 100;
+    return score * pow(1.01, number_kinematic_now) * pow(0.5, get_count_fallen_blocks());
 }
 
 void BlocksManager::turn_kinematic_left() {
