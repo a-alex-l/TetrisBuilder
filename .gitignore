@@ -8,3 +8,4 @@ SConstruct
 /src/BlocksManager.os
 /src/GroundMove.os
 /src/Levels.os
+/TetrisBuilder/bin/x11/libgdexample.so
