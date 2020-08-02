@@ -97,9 +97,9 @@ double BlocksManager::get_score_now() {
 }
 
 void BlocksManager::turn_kinematic_left() {
-    cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->rotate(90);
+    cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->rotate(-M_PI * 0.5);
 }
 
 void BlocksManager::turn_kinematic_right() {
-    cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->rotate(-90);
+    cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->rotate(M_PI * 0.5);
 }
