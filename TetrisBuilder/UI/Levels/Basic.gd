@@ -6,33 +6,54 @@ func _ready():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 func _on_Button_pressed(scene_to_load):
+	_show_all()
 	$MarginContainer.hide()
-	$GUI2.show()
-	$Zero.show()
-	$GUI.show()
-	$Zero._create_level(scene_to_load)
-	$GUI2._ready()
-	$GUI2.animated_blocks = $Zero.get_count_of_remaining_blocks()
-	
+	_start_game(scene_to_load)
+
 func _process(delta):
+	_update_all()
+	_check_turns()
+	_check_end()
+
+func _show_all():
+	$MarginContainer.show()
+	$GameUI.show()
+	$Zero.show()
+	$Turns.show()
+
+func _hide_all():
+	$Zero.hide()
+	$GameUI.hide()
+	$Turns.hide()
+	$MarginContainer.hide()
+
+func _start_game(scene_to_load):
+	$Zero._create_level(scene_to_load)
+	$GameUI._ready()
+	$GameUI.animated_blocks = $Zero.get_count_of_remaining_blocks()
+
+func _update_all():
 	var blocks = $Zero.get_count_of_remaining_blocks() #сколько осталось (инт)
 	var failed = $Zero.get_count_fallen_blocks() #сколько выпало за сцену
 	var score = $Zero.get_score_now() #очки
-	$GUI2.update_health($GUI2.player_max_health - failed)
-	print($Zero.get_score_now())
-	$GUI2.update_score(score)
-	$GUI2.update_blocks(blocks)
-	if $GUI.condition == '1' :
+	$GameUI.update_health($GameUI.player_max_health - failed)
+	$GameUI.update_score(score)
+	$GameUI.update_blocks(blocks)
+	
+func _check_turns():
+	if $Turns.condition == '1' :
 		$Zero.turn_kinematic_left()
-		$GUI.condition = '0'
-	if $GUI.condition == '2' :
+		$Turns.condition = '0'
+	if $Turns.condition == '2' :
 		$Zero.turn_kinematic_right()
-		$GUI.condition = '0'
-	if round($GUI2.animated_health) == 0:
-		$Zero.hide()
-		$GUI2.hide()
-		$GUI.hide()
+		$Turns.condition = '0'
+
+func _check_end():
+	if round($GameUI.animated_health) == 0:
+		_hide_all()
 		$LoseScene.show()
-		
-		
+	if $GameUI.animated_blocks == 0:
+		_hide_all()
+		$WinScene.show()
+
 
