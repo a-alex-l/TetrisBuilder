@@ -1,6 +1,5 @@
 #include <String.hpp>
 #include <RigidBody2D.hpp>
-#include <Camera2D.hpp>
 
 #include "StrikeOutCollision.hpp"
 #include "BlocksManager.hpp"
@@ -41,13 +40,12 @@ void BlocksManager::_create_level(int level_number) {
     Level_KinematicBody->set_name("Level");
     Level_KinematicBody->set_position(Vector2(WIDTH / 2, HEIGHT));
     add_child(Level_KinematicBody);
-    Godot::print("Static done!");
     add_kinematic();
 }
 
 void BlocksManager::remove_kinematic() {
     Node2D *tmp = (Node2D*)(level.get_rigid_object(number_kinematic_now)->instance());
-    cast_to<RigidBody2D>(tmp->get_child(0))->set_global_transform(cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->get_global_transform());
+    cast_to<RigidBody2D>(tmp->get_child(0))->set_transform(cast_to<BlockMove>(Block_KinematicBody_Now->get_child(0))->get_transform());
     tmp->set_name(Block_KinematicBody_Now->get_name());
     remove_child(Block_KinematicBody_Now);
     add_child(tmp);
@@ -55,6 +53,7 @@ void BlocksManager::remove_kinematic() {
         quake();
     if (number_kinematic_now + 1 != level.get_kinematic_size())
         add_kinematic();
+    find_height();
 }
 
 void BlocksManager::_physics_process(double delta) {}
@@ -63,14 +62,24 @@ void BlocksManager::add_kinematic() {
     number_kinematic_now++;
     Block_KinematicBody_Now = cast_to<Node2D>(level.get_kinematic_object(number_kinematic_now)->instance());
     Block_KinematicBody_Now->set_name(String("BLock ") + String::num_int64(number_kinematic_now));
-    Block_KinematicBody_Now->set_position(Vector2(WIDTH / 2, HEIGHT / 20));
+    cast_to<Node2D>(Block_KinematicBody_Now->get_child(0))->set_position(Vector2(WIDTH / 2, tower_height - HEIGHT * 0.8));
     add_child(Block_KinematicBody_Now);
 }
 
 void BlocksManager::quake() {
-    Godot::print("Heeey!");
-    for (int i = 0; i < Level_KinematicBody->get_child_count(); i++) {
+    for (int i = 0; i < Level_KinematicBody->get_child_count(); i++)
         cast_to<GroundMove>((Level_KinematicBody->get_child(i))->get_child(0))->quake(i);
+}
+
+static int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+
+void BlocksManager::find_height() {
+    for (int i = max(2, int(get_child_count()) - 10); i + 3 < get_child_count(); i++) {
+        if (tower_height > cast_to<Node2D>((get_child(i))->get_child(0))->get_global_position().y)
+            tower_height = cast_to<Node2D>((get_child(i))->get_child(0))->get_global_position().y;
     }
 }
 
