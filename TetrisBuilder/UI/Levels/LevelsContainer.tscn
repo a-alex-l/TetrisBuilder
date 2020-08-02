@@ -28,9 +28,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -520.0
-margin_top = -280.0
+margin_top = -303.0
 margin_right = 520.0
-margin_bottom = 280.0
+margin_bottom = 309.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 1040, 560 )
@@ -39,14 +39,14 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1040.0
-margin_bottom = 560.0
+margin_bottom = 612.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 50
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 margin_right = 1040.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -63,72 +63,72 @@ anchor_bottom = 0.0
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 193.0
-margin_bottom = 191.0
+margin_bottom = 217.0
 scene_to_load = "0"
 
 [node name="Level2" parent="VBoxContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 211.0
 margin_right = 404.0
-margin_bottom = 191.0
+margin_bottom = 217.0
 size_flags_vertical = 1
 scene_to_load = "1"
 
 [node name="Level3" parent="VBoxContainer/GridContainer" instance=ExtResource( 3 )]
 margin_left = 422.0
 margin_right = 615.0
-margin_bottom = 191.0
+margin_bottom = 217.0
 scene_to_load = "2"
 
 [node name="Level4" parent="VBoxContainer/GridContainer" instance=ExtResource( 4 )]
 margin_left = 633.0
 margin_right = 826.0
-margin_bottom = 191.0
+margin_bottom = 217.0
 scene_to_load = "3"
 
 [node name="Level5" parent="VBoxContainer/GridContainer" instance=ExtResource( 5 )]
 margin_left = 844.0
 margin_right = 1037.0
-margin_bottom = 191.0
+margin_bottom = 217.0
 scene_to_load = "4"
 
 [node name="Level6" parent="VBoxContainer/GridContainer" instance=ExtResource( 6 )]
-margin_top = 209.0
+margin_top = 235.0
 margin_right = 193.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 scene_to_load = "5"
 
 [node name="Level7" parent="VBoxContainer/GridContainer" instance=ExtResource( 7 )]
 margin_left = 211.0
-margin_top = 209.0
+margin_top = 235.0
 margin_right = 404.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 scene_to_load = "6"
 
 [node name="Level8" parent="VBoxContainer/GridContainer" instance=ExtResource( 8 )]
 margin_left = 422.0
-margin_top = 209.0
+margin_top = 235.0
 margin_right = 615.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 scene_to_load = "7"
 
 [node name="Level9" parent="VBoxContainer/GridContainer" instance=ExtResource( 9 )]
 margin_left = 633.0
-margin_top = 209.0
+margin_top = 235.0
 margin_right = 826.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 scene_to_load = "8"
 
 [node name="Level10" parent="VBoxContainer/GridContainer" instance=ExtResource( 10 )]
 margin_left = 844.0
-margin_top = 209.0
+margin_top = 235.0
 margin_right = 1037.0
-margin_bottom = 400.0
+margin_bottom = 452.0
 scene_to_load = "9"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 450.0
+margin_top = 502.0
 margin_right = 1040.0
-margin_bottom = 560.0
+margin_bottom = 612.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 custom_constants/separation = 50
