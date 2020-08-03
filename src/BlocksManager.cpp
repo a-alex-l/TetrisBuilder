@@ -1,5 +1,6 @@
 #include <String.hpp>
 #include <RigidBody2D.hpp>
+#include <Camera2D.hpp>
 
 #include "StrikeOutCollision.hpp"
 #include "BlocksManager.hpp"
@@ -53,6 +54,9 @@ void BlocksManager::remove_kinematic() {
         quake();
     if (number_kinematic_now + 1 != level.get_kinematic_size())
         add_kinematic();
+    else {
+        cast_to<Camera2D>(get_child(1))->set_position(Vector2(WIDTH / 2, HEIGHT / 2));
+    }
     find_height();
 }
 
