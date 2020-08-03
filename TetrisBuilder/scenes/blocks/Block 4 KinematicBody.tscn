@@ -10,21 +10,21 @@ region = Rect2( 0, 130, 180, 120 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.0
-height = 48.0
+height = 46.0
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 5.0
-height = 58.0
+height = 56.0
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 5.0
-height = 48.0
+height = 46.0
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 84, 29 )
+extents = Vector2( 83, 28 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 29, 27.5 )
+extents = Vector2( 28, 27.5 )
 
 [node name="Block 4" type="Node2D"]
 
@@ -36,17 +36,17 @@ position = Vector2( 15, -15 )
 texture = SubResource( 1 )
 
 [node name="Block 4 Right Side" type="CollisionShape2D" parent="Block 4"]
-position = Vector2( 99, 15 )
+position = Vector2( 98, 15 )
 shape = SubResource( 2 )
 one_way_collision_margin = 100.0
 
 [node name="Block 4 Left Side" type="CollisionShape2D" parent="Block 4"]
-position = Vector2( -69, 10 )
+position = Vector2( -68, 10 )
 shape = SubResource( 3 )
 one_way_collision_margin = 100.0
 
 [node name="Block 4 Bottom Side" type="CollisionShape2D" parent="Block 4"]
-position = Vector2( -45, -69 )
+position = Vector2( -45, -68 )
 rotation = 1.5708
 shape = SubResource( 4 )
 one_way_collision_margin = 100.0
@@ -57,6 +57,6 @@ shape = SubResource( 5 )
 one_way_collision_margin = 100.0
 
 [node name="Block 4 Down Body" type="CollisionShape2D" parent="Block 4"]
-position = Vector2( -45, -41.5 )
+position = Vector2( -45, -40.5 )
 shape = SubResource( 6 )
 one_way_collision_margin = 100.0

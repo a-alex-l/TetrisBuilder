@@ -18,6 +18,8 @@ namespace godot {
         Node2D *Block_KinematicBody_Now;
         Node2D *Level_KinematicBody;
         Levels level;
+        bool game_end_blocks = false;
+        bool game_end_show = false;
 
     public:
         static void _register_methods();
@@ -44,6 +46,9 @@ namespace godot {
         void turn_kinematic_right();
 
         void find_height();
+
+        bool is_game_end();
+        void game_end();
 
     };
 
