@@ -49,11 +49,12 @@ func _check_turns():
 		$Zero/Camera2D/Turns.condition = '0'
 
 func _check_end():
-	if round($Zero/Camera2D/GameUI.animated_health) == 0:
-		_hide_all()
-		$LoseScene.show()
-	if $Zero/Camera2D/GameUI.animated_blocks == 0:
-		_hide_all()
-		$WinScene.show()
+	if $Zero.is_game_end():
+		if round($Zero/Camera2D/GameUI.animated_health) <= 0:
+			_hide_all()
+			$LoseScene.show()
+		else:
+			_hide_all()
+			$WinScene.show()
 
 
