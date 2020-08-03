@@ -40,7 +40,8 @@ void BlockMove::_input(InputEvent *input) {
                     movement_phase = 2;
                 break;
             case 1:
-                (cast_to<BlocksManager>(get_parent()->get_parent()))->remove_kinematic();
+                if (is_on_floor() || is_on_wall() || is_on_ceiling())
+                    (cast_to<BlocksManager>(get_parent()->get_parent()))->remove_kinematic();
                 movement_phase = 0;
                 break;
             case 2:
