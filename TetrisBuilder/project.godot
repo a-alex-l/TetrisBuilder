@@ -35,3 +35,7 @@ window/stretch/aspect="keep_height"
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.968627, 0.901961, 0.968627, 1 )
