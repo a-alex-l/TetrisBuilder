@@ -31,3 +31,7 @@ window/size/height=720
 
 pointing/emulate_touch_from_mouse=true
 pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+environment/default_clear_color=Color( 0.968627, 0.901961, 0.968627, 1 )

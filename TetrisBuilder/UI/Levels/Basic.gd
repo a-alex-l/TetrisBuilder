@@ -2,7 +2,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for button in $MarginContainer/VBoxContainer/GridContainer.get_children():
+	for button in $MarginContainer/VBoxContainer/TextureRect/GridContainer.get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 func _on_Button_pressed(scene_to_load):
@@ -14,6 +14,7 @@ func _process(delta):
 	_update_all()
 	_check_turns()
 	_check_end()
+	print("Here")
 
 func _show_all():
 	$MarginContainer.show()
@@ -52,8 +53,10 @@ func _check_end():
 	if round($GameUI.animated_health) == 0:
 		_hide_all()
 		$LoseScene.show()
+		print("go out")
 	if $GameUI.animated_blocks == 0:
 		_hide_all()
+		print("go out")
 		$WinScene.show()
 
 

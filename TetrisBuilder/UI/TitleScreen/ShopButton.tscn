@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://UI/TitleScreen/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://graphics/Interface/TitleLevels.png" type="Texture" id=1]
 
-[node name="ShopButton" instance=ExtResource( 1 )]
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 15, 290, 415, 75 )
 
-[node name="Label" parent="." index="0"]
-text = "Shop"
+[node name="Shop" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -920.0
+margin_bottom = -660.0
+rect_min_size = Vector2( 360, 60 )
+texture_normal = SubResource( 1 )
+expand = true
+stretch_mode = 5
 
