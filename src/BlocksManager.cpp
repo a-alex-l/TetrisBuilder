@@ -74,6 +74,7 @@ void BlocksManager::_physics_process(double delta) {
             time_pass = 1;
             if (last_tower_height == tower_height) {
                 cast_to<Camera2D>(get_child(1))->set_position(Vector2(WIDTH / 2, HEIGHT / 2));
+                cast_to<Camera2D>(get_child(1))->set_zoom(Vector2(1, 1));
                 game_end_show = true;
             }
         }
