@@ -16,6 +16,9 @@ custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 20.0
@@ -46,4 +49,3 @@ expand = true
 stretch_mode = 4
 script = ExtResource( 5 )
 move = "2"
-

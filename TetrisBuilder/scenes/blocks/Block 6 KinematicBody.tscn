@@ -10,20 +10,19 @@ region = Rect2( 320, 70, 120, 180 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.0
-height = 60.0
+height = 56.0
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 5.0
-height = 50.0
+height = 46.0
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 30, 55 )
+extents = Vector2( 28, 53 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 30, 55 )
+extents = Vector2( 28, 53 )
 
 [node name="Block 6" type="Node2D"]
-position = Vector2( 60, 90 )
 
 [node name="Block 5" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
@@ -32,41 +31,35 @@ script = ExtResource( 1 )
 texture = SubResource( 1 )
 
 [node name="Block 5 Right Up" type="CollisionShape2D" parent="Block 5"]
-position = Vector2( -25, -25 )
+position = Vector2( -25, -24 )
 rotation = 1.5708
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 2 )
 one_way_collision_margin = 100.0
 
 [node name="Block 5 Left Bottom" type="CollisionShape2D" parent="Block 5"]
-position = Vector2( 25, 25 )
+position = Vector2( 25, 23 )
 rotation = 1.5708
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 2 )
 one_way_collision_margin = 100.0
 
 [node name="Block 5 Bottom Side" type="CollisionShape2D" parent="Block 5"]
-position = Vector2( -30, 85 )
+position = Vector2( -30, 83 )
 rotation = 1.5708
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 3 )
 one_way_collision_margin = 100.0
 
 [node name="Block 5 Up Side" type="CollisionShape2D" parent="Block 5"]
-position = Vector2( 30, -85 )
+position = Vector2( 30, -83 )
 rotation = 1.5708
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 3 )
 one_way_collision_margin = 100.0
 
 [node name="Block 5 Right Body" type="CollisionShape2D" parent="Block 5"]
 position = Vector2( -30, 30 )
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 4 )
 one_way_collision_margin = 100.0
 
 [node name="Block 5 Left Body" type="CollisionShape2D" parent="Block 5"]
 position = Vector2( 30, -30 )
-scale = Vector2( 0.99, 0.99 )
 shape = SubResource( 5 )
 one_way_collision_margin = 100.0

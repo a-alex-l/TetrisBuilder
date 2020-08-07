@@ -13,10 +13,13 @@ namespace godot {
 
     private:
 
+        int tower_height = 720;
         int number_kinematic_now = -1;
         Node2D *Block_KinematicBody_Now;
         Node2D *Level_KinematicBody;
         Levels level;
+        bool game_end_blocks = false;
+        bool game_end_show = false;
 
     public:
         static void _register_methods();
@@ -42,6 +45,10 @@ namespace godot {
         void turn_kinematic_left();
         void turn_kinematic_right();
 
+        void find_height();
+
+        bool is_game_end();
+        void game_end();
 
     };
 

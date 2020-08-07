@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://bin/BlocksManager.gdns" type="Script" id=1]
 [ext_resource path="res://bin/StrikeOut.gdns" type="Script" id=2]
+[ext_resource path="res://UI/GameScreen/GUILower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/GameScreen/GUI.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1000, 100000 )
@@ -29,4 +31,18 @@ shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 640, 360 )
+z_index = 1
+current = true
+
+[node name="Turns" parent="Camera2D" instance=ExtResource( 4 )]
+margin_left = -638.0
+margin_top = 120.0
+margin_right = 642.0
+margin_bottom = 360.0
+
+[node name="GameUI" parent="Camera2D" instance=ExtResource( 3 )]
+margin_left = -640.0
+margin_top = -362.0
+margin_right = 640.0
+margin_bottom = -202.0
 [connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]

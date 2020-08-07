@@ -32,7 +32,7 @@ void GroundMove::_physics_process(double delta) {
             is_quake = false;
             move_and_slide(position - get_global_position());
         }
-        Vector2 tmp =  Vector2(rand->randf() * 10 - 5, rand->randf() * 10 - 5);
-        move_and_slide((position - get_global_position() + tmp) * 5);
+        Vector2 tmp =  Vector2(rand->randf() * 8 - 4, rand->randf() * 8 - 4);
+        move_and_slide((position - get_global_position() + tmp) * 4);
     }
 }
