@@ -64,8 +64,10 @@ void BlocksManager::remove_kinematic() {
 
 void BlocksManager::_physics_process(double delta) {
     static double time_pass = 2;
-    if (get_count_fallen_blocks() == 5)
+    if (get_count_fallen_blocks() == 5 && !game_end_blocks) {
+        remove_kinematic();
         game_end();
+    }
     if (game_end_blocks) {
         time_pass -= delta;
         if (time_pass < 0) {
