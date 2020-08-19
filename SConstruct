@@ -8,7 +8,7 @@ env = DefaultEnvironment()
 
 # Define our options
 opts.Add(EnumVariable('target', "Compilation target", 'debug', ['d', 'debug', 'r', 'release']))
-opts.Add(EnumVariable('platform', "Compilation platform", '', ['', 'windows', 'x11', 'linux', 'osx', 'android_armv7', 'android_arm64v8', 'android_x86_64']))
+opts.Add(EnumVariable('platform', "Compilation platform", '', ['', 'windows', 'x11', 'linux', 'osx', 'android_armv7', 'android_arm64v8', 'android_x86', 'android_x86_64']))
 opts.Add(EnumVariable('p', "Compilation target, alias for 'platform'", '', ['', 'windows', 'x11', 'linux', 'osx']))
 opts.Add(BoolVariable('use_llvm', "Use the LLVM / Clang compiler", 'no'))
 opts.Add(PathVariable('target_path', 'The path where the lib is installed.', 'TetrisBuilder/bin/'))
@@ -77,6 +77,10 @@ else:
         env['target_path'] += 'arm64v8/'
         cpp_library += '.arm64v8.a'
         env['CXX'] += 'aarch64-linux-android30-clang++'
+    elif env['platform'] in ('android_x86'):
+        env['target_path'] += 'x86/'
+        cpp_library += '.x86.a'
+        env['CXX'] += 'i686-linux-android30-clang++'
     elif env['platform'] in ('android_x86_64'):
         env['target_path'] += 'x86_64/'
         cpp_library += '.x86_64.a'

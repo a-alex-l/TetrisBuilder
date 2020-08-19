@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://graphics/Enviroment/Stony Ground.png" type="Texture" id=1]
+[ext_resource path="res://graphics/Tetromino/Green Old Blocks.png" type="Texture" id=1]
 [ext_resource path="res://bin/GroundMove.gdns" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 25, 30 )
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 164, 0, 32, 32 )
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 5.0
-height = 50.0
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 14 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 2.0
+height = 24.0
 
 [node name="Stony Ground" type="Node2D"]
 
@@ -16,17 +21,15 @@ height = 50.0
 script = ExtResource( 3 )
 
 [node name="Stony Ground Sprite" type="Sprite" parent="Stony Ground"]
-position = Vector2( 30, 30 )
-texture = ExtResource( 1 )
+texture = SubResource( 1 )
 
 [node name="Stony Ground Body" type="CollisionShape2D" parent="Stony Ground"]
-position = Vector2( 30, 30 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Stony Ground Left Side" type="CollisionShape2D" parent="Stony Ground"]
-position = Vector2( 5, 30 )
-shape = SubResource( 2 )
+position = Vector2( -12, 0 )
+shape = SubResource( 3 )
 
 [node name="Stony Dround Right Side" type="CollisionShape2D" parent="Stony Ground"]
-position = Vector2( 55, 30 )
-shape = SubResource( 2 )
+position = Vector2( 12, 0 )
+shape = SubResource( 3 )
