@@ -1,6 +1,6 @@
 #!/usr/bin/env
+scons platform=linux target=release
 scons platform=android_armv7 target=release
 scons platform=android_arm64v8 target=release
 scons platform=android_x86 target=release
 scons platform=android_x86_64 target=release
-scons platform=linux target=release

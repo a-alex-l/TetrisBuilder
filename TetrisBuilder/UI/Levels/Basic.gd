@@ -14,7 +14,6 @@ func _process(delta):
 	_update_all()
 	_check_turns()
 	_check_end()
-	print("Here")
 
 func _show_all():
 	$MarginContainer.show()

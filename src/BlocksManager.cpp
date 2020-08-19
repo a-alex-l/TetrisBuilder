@@ -43,8 +43,7 @@ void BlocksManager::_create_level(int level_number) {
     Level_KinematicBody = (Node2D*)(level.get_level_object()->instance());
     Level_KinematicBody->set_name("Level");
     Level_KinematicBody->set_position(Vector2(WIDTH / 2, HEIGHT));
-    add_child(Level_KinematicBody);
-    add_kinematic();
+    game_phase = START_GAME;
 }
 
 void BlocksManager::remove_kinematic() {
@@ -53,32 +52,61 @@ void BlocksManager::remove_kinematic() {
     tmp->set_name(Block_KinematicBody_Now->get_name());
     remove_child(Block_KinematicBody_Now);
     add_child(tmp);
-    if (number_kinematic_now + 1 == level.get_kinematic_size() || number_kinematic_now % 10 == 9)
-        quake();
-    if (number_kinematic_now + 1 != level.get_kinematic_size())
-        add_kinematic();
-    else
-        game_end();
-    find_height();
+    Block_KinematicBody_Now = nullptr;
+    current_timer = TIME[game_phase];
 }
 
 void BlocksManager::_physics_process(double delta) {
-    static double time_pass = 2;
-    if (get_count_fallen_blocks() == 5 && !game_end_blocks) {
-        remove_kinematic();
-        game_end();
-    }
-    if (game_end_blocks) {
-        time_pass -= delta;
-        if (time_pass < 0) {
-            int last_tower_height = tower_height;
-            find_height();
-            time_pass = 1;
-            if (last_tower_height == tower_height) {
-                cast_to<Camera2D>(get_child(1))->set_position(Vector2(WIDTH / 2, HEIGHT / 2));
+    current_timer -= delta;
+    if (current_timer < 0) {
+        switch (game_phase) {
+            case START_GAME:
+                game_phase = WAIT_FOR_LEVEL;
+                current_timer = TIME[game_phase];
+                break;
+
+            case WAIT_FOR_LEVEL:
+                add_child(Level_KinematicBody);
+                game_phase = WAIT_FOR_FIRST_BLOCK;
+                current_timer = TIME[game_phase];
+                break;
+
+            case WAIT_FOR_FIRST_BLOCK:
+                add_kinematic();
+                game_phase = WAIT_FOR_NEXT_BLOCK;
+                current_timer = TIME[game_phase];
+                break;
+
+            case WAIT_FOR_NEXT_BLOCK:
+                if (Block_KinematicBody_Now == nullptr) {
+                    if (number_kinematic_now % 5 == 4) quake();
+                    if (number_kinematic_now + 1 != level.get_kinematic_size() &&
+                                get_count_fallen_blocks() < 5) {
+                        add_kinematic();
+                    } else {
+                        game_end();
+                        game_phase = WAIT_FOR_SHOW_TOWER;
+                    }
+                }
+                current_timer = TIME[game_phase];
+                break;
+
+            case WAIT_FOR_SHOW_TOWER:
+                game_phase = WAIT_TO_NEXT_TOWER_CHECK;
+                break;
+
+            case WAIT_TO_NEXT_TOWER_CHECK:
+                if (is_tower_stay()) {
+                    game_phase = END_GAME;
+                }
+                current_timer = TIME[game_phase];
+                break;
+
+            case END_GAME:
+                cast_to<Camera2D>(get_child(1))->set_position(
+                        Vector2(WIDTH / 2, HEIGHT / 2));
                 cast_to<Camera2D>(get_child(1))->set_zoom(Vector2(1, 1));
-                game_end_show = true;
-            }
+                break;
         }
     }
 }
@@ -87,7 +115,7 @@ void BlocksManager::add_kinematic() {
     number_kinematic_now++;
     Block_KinematicBody_Now = cast_to<Node2D>(level.get_kinematic_object(number_kinematic_now)->instance());
     Block_KinematicBody_Now->set_name(String("BLock ") + String::num_int64(number_kinematic_now));
-    cast_to<Node2D>(Block_KinematicBody_Now->get_child(0))->set_position(Vector2(WIDTH / 2, tower_height - HEIGHT * 0.8));
+    cast_to<Node2D>(Block_KinematicBody_Now->get_child(0))->set_position(Vector2(WIDTH / 2, find_height() - HEIGHT * 0.5));
     add_child(Block_KinematicBody_Now);
 }
 
@@ -100,13 +128,21 @@ static int max(int a, int b) {
     return a > b ? a : b;
 }
 
-
-void BlocksManager::find_height() {
-    tower_height = 1000;
+int BlocksManager::find_height() {
+    int tower_height = 600;
     for (int i = max(2, int(get_child_count()) - 10); i + 1 < get_child_count(); i++) {
         if (tower_height > cast_to<Node2D>((get_child(i))->get_child(0))->get_global_position().y)
             tower_height = cast_to<Node2D>((get_child(i))->get_child(0))->get_global_position().y;
     }
+    return tower_height;
+}
+
+bool BlocksManager::is_tower_stay() {
+    bool can_sleep = true;
+    for (int i = 3; i + 1 < get_child_count(); i++) {
+        can_sleep &= cast_to<RigidBody2D>((get_child(i))->get_child(0))->is_able_to_sleep();
+    }
+    return can_sleep;
 }
 
 int BlocksManager::get_count_of_remaining_blocks() {
@@ -131,16 +167,14 @@ void BlocksManager::turn_kinematic_right() {
 }
 
 bool BlocksManager::is_game_end() {
-    return game_end_show;
+    return game_phase == END_GAME;
 }
 
 void BlocksManager::game_end() {
-    find_height();
+    int tower_height = find_height();
     if (double(-1 * tower_height + HEIGHT) / double(HEIGHT) > 1)
         cast_to<Camera2D>(get_child(1))->set_zoom(
             Vector2(double(-1 * tower_height + HEIGHT * 2) / double(HEIGHT),
                     double(-1 * tower_height + HEIGHT * 2) / double(HEIGHT)));
-    Godot::print(String::num_real(double(HEIGHT) / double(-1 * tower_height + HEIGHT)));
     cast_to<Camera2D>(get_child(1))->set_position(Vector2(WIDTH / 2, tower_height / 2 + HEIGHT / 2));
-    game_end_blocks = true;
 }

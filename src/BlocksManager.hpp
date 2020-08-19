@@ -13,13 +13,23 @@ namespace godot {
 
     private:
 
-        int tower_height = 720;
+        enum GamePhase {
+            WAIT_GAME_START,
+            START_GAME,
+            WAIT_FOR_LEVEL,
+            WAIT_FOR_FIRST_BLOCK,
+            WAIT_FOR_NEXT_BLOCK,
+            WAIT_FOR_SHOW_TOWER,
+            WAIT_TO_NEXT_TOWER_CHECK,
+            END_GAME
+        };
+        double current_timer = 0;
+        GamePhase game_phase = WAIT_GAME_START;
+
         int number_kinematic_now = -1;
         Node2D *Block_KinematicBody_Now;
         Node2D *Level_KinematicBody;
         Levels level;
-        bool game_end_blocks = false;
-        bool game_end_show = false;
 
     public:
         static void _register_methods();
@@ -45,7 +55,8 @@ namespace godot {
         void turn_kinematic_left();
         void turn_kinematic_right();
 
-        void find_height();
+        int find_height();
+        bool is_tower_stay();
 
         bool is_game_end();
         void game_end();
