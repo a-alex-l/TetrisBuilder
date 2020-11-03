@@ -14,12 +14,12 @@ extents = Vector2( 4000, 1000 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 25, 64, 21, 18 )
+region = Rect2( 25, 71, 21, 18 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 72, 64, 21, 18 )
+region = Rect2( 72, 71, 21, 18 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -29,17 +29,17 @@ region = Rect2( 261, 1, 17, 13 )
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 1, 64, 21, 18 )
+region = Rect2( 1, 71, 21, 18 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 64, 43, 20, 18 )
+region = Rect2( 64, 48, 20, 18 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 49, 64, 20, 18 )
+region = Rect2( 49, 71, 20, 18 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
@@ -47,16 +47,25 @@ atlas = ExtResource( 2 )
 region = Rect2( 281, 1, 11, 16 )
 
 [node name="GameInterfaceControl" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_bottom = 6.10352e-05
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Zero" type="Node2D" parent="."]
+[node name="Zero" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Trigger" type="Area2D" parent="Zero"]
 
@@ -73,8 +82,8 @@ position = Vector2( 0, 2000 )
 shape = SubResource( 2 )
 
 [node name="Interface" type="Control" parent="."]
-anchor_top = -1.0
 anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -89,10 +98,10 @@ __meta__ = {
 }
 
 [node name="LeftTurnButton" type="TextureButton" parent="Interface/LeftSide"]
-margin_left = 50.0
-margin_top = 572.0
-margin_right = 71.0
-margin_bottom = 590.0
+margin_left = 10.0
+margin_top = 602.0
+margin_right = 31.0
+margin_bottom = 620.0
 rect_scale = Vector2( 6, 6 )
 texture_normal = SubResource( 3 )
 __meta__ = {
@@ -100,44 +109,44 @@ __meta__ = {
 }
 
 [node name="Pause" type="TextureButton" parent="Interface/LeftSide"]
-margin_left = 50.0
-margin_top = 50.0
-margin_right = 71.0
-margin_bottom = 68.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 31.0
+margin_bottom = 28.0
+rect_scale = Vector2( 5, 5 )
 texture_normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Heart1" type="TextureRect" parent="Interface/LeftSide"]
-margin_left = 60.0
-margin_top = 210.0
-margin_right = 77.0001
-margin_bottom = 223.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 10.0
+margin_top = 250.0
+margin_right = 27.0001
+margin_bottom = 263.0
+rect_scale = Vector2( 4, 4 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Heart2" type="TextureRect" parent="Interface/LeftSide"]
-margin_left = 60.0
+margin_left = 10.0
 margin_top = 310.0
-margin_right = 77.0001
+margin_right = 27.0001
 margin_bottom = 323.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 4, 4 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Heart3" type="TextureRect" parent="Interface/LeftSide"]
-margin_left = 60.0
-margin_top = 410.0
-margin_right = 77.0001
-margin_bottom = 423.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 10.0
+margin_top = 370.0
+margin_right = 27.0001
+margin_bottom = 383.0
+rect_scale = Vector2( 4, 4 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -155,10 +164,10 @@ __meta__ = {
 }
 
 [node name="RightTurnButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -176.0
-margin_top = 572.0
-margin_right = -155.0
-margin_bottom = 590.0
+margin_left = -136.0
+margin_top = 602.0
+margin_right = -115.0
+margin_bottom = 620.0
 rect_scale = Vector2( 6, 6 )
 texture_normal = SubResource( 6 )
 __meta__ = {
@@ -166,32 +175,32 @@ __meta__ = {
 }
 
 [node name="PlusButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -176.0
-margin_top = 220.0
-margin_right = -155.0
-margin_bottom = 238.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -110.0
+margin_top = 240.0
+margin_right = -89.0
+margin_bottom = 258.0
+rect_scale = Vector2( 5, 5 )
 texture_normal = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MinusButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -176.0
+margin_left = -110.0
 margin_top = 340.0
-margin_right = -155.0
+margin_right = -89.0
 margin_bottom = 358.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 5, 5 )
 texture_normal = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BlockPicture" type="TextureRect" parent="Interface/RightSide"]
-margin_left = -130.0
-margin_top = 60.0
-margin_right = -119.0
-margin_bottom = 76.0
+margin_left = -90.0
+margin_top = 10.0
+margin_right = -79.0
+margin_bottom = 26.0
 rect_scale = Vector2( 6, 6 )
 texture = SubResource( 9 )
 __meta__ = {
@@ -199,10 +208,10 @@ __meta__ = {
 }
 
 [node name="CountRemainBlock" type="Label" parent="Interface/RightSide"]
-margin_left = -280.0
-margin_top = 80.0
-margin_right = -245.0
-margin_bottom = 95.0
+margin_left = -235.0
+margin_top = 30.0
+margin_right = -200.0
+margin_bottom = 45.0
 rect_scale = Vector2( 4, 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
@@ -212,13 +221,12 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 0, -720 )
 anchor_mode = 0
 current = true
 script = ExtResource( 4 )
-[connection signal="body_entered" from="Zero/Trigger" to="Zero/Trigger" method="_on_Trigger_body_entered"]
+[connection signal="body_entered" from="Zero/Trigger" to="Zero" method="_on_Trigger_block_entered"]
 [connection signal="pressed" from="Interface/LeftSide/LeftTurnButton" to="." method="_on_LeftTurnButton_pressed"]
 [connection signal="pressed" from="Interface/LeftSide/Pause" to="." method="_on_Pause_pressed"]
 [connection signal="pressed" from="Interface/RightSide/RightTurnButton" to="." method="_on_RightTurnButton_pressed"]
-[connection signal="pressed" from="Interface/RightSide/PlusButton" to="Camera" method="_on_ScaleButton_pressed" binds= [ 0.95 ]]
-[connection signal="pressed" from="Interface/RightSide/MinusButton" to="Camera" method="_on_ScaleButton_pressed" binds= [ 1.05 ]]
+[connection signal="pressed" from="Interface/RightSide/PlusButton" to="Camera" method="_on_ScaleButton_pressed" binds= [ 0.75 ]]
+[connection signal="pressed" from="Interface/RightSide/MinusButton" to="Camera" method="_on_ScaleButton_pressed" binds= [ 1.25 ]]

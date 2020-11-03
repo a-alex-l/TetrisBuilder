@@ -1,8 +1,59 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="SettingsWindowControl" type="Control"]
+[ext_resource path="res://graphics/Interface.png" type="Texture" id=1]
+[ext_resource path="res://scripts/LevelsWindowControl.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 1, 52, 18 )
+
+[node name="LevelsWindowControl" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.7
+margin_right = 3.05176e-05
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CenterContainer"]
+margin_left = 202.0
+margin_top = 200.0
+margin_right = 202.0
+margin_bottom = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuCenter" type="CenterContainer" parent="."]
+anchor_top = 0.7
+anchor_right = 0.25
+anchor_bottom = 0.8
+margin_right = -0.249992
+margin_bottom = -18.0
+rect_scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="TextureButton" parent="MenuCenter"]
+margin_left = 24.0
+margin_top = 18.0
+margin_right = 76.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 26, 9 )
+texture_normal = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MenuCenter/MenuButton" to="." method="_on_MenuButton_pressed"]

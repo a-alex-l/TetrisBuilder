@@ -6,72 +6,72 @@
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 87, 43, 25, 18 )
+region = Rect2( 87, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 115, 43, 25, 18 )
+region = Rect2( 115, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 143, 43, 25, 18 )
+region = Rect2( 143, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 171, 43, 25, 18 )
+region = Rect2( 171, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 124, 64, 25, 18 )
+region = Rect2( 124, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 152, 64, 25, 18 )
+region = Rect2( 152, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 180, 64, 25, 18 )
+region = Rect2( 180, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 208, 64, 25, 18 )
+region = Rect2( 208, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 236, 64, 25, 18 )
+region = Rect2( 236, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 264, 64, 25, 18 )
+region = Rect2( 264, 71, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 199, 43, 25, 18 )
+region = Rect2( 199, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 226, 43, 25, 18 )
+region = Rect2( 226, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 254, 43, 25, 18 )
+region = Rect2( 254, 48, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 244, 22, 25, 18 )
+region = Rect2( 242, 24, 25, 18 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
@@ -92,202 +92,205 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_top = 0.2
 anchor_right = 1.0
-anchor_bottom = 0.8
-margin_right = 40.0
+anchor_bottom = 0.7
+margin_right = 3.05176e-05
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Control" type="Control" parent="CenterContainer"]
-margin_left = 660.0
-margin_top = 308.0
-margin_right = 660.0
-margin_bottom = 308.0
+margin_left = 202.0
+margin_top = 200.0
+margin_right = 202.0
+margin_bottom = 200.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="0Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -535.0
-margin_top = -214.0
-margin_right = -510.0
-margin_bottom = -196.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -197.5
+margin_top = -154.0
+margin_right = -172.5
+margin_bottom = -136.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="1Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -305.0
-margin_top = -214.0
-margin_right = -280.0
-margin_bottom = -196.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -117.5
+margin_top = -154.0
+margin_right = -92.5
+margin_bottom = -136.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="2Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -75.0
-margin_top = -214.0
-margin_right = -50.0
-margin_bottom = -196.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -37.5
+margin_top = -154.0
+margin_right = -12.5
+margin_bottom = -136.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="3Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 145.0
-margin_top = -214.0
-margin_right = 170.0
-margin_bottom = -196.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 42.5
+margin_top = -154.0
+margin_right = 67.5
+margin_bottom = -136.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="4Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 365.0
-margin_top = -214.0
-margin_right = 390.0
-margin_bottom = -196.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 122.5
+margin_top = -154.0
+margin_right = 147.5
+margin_bottom = -136.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="5Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -535.0
+margin_left = -197.5
 margin_top = -54.0
-margin_right = -510.0
+margin_right = -172.5
 margin_bottom = -36.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="6Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -305.0
+margin_left = -117.5
 margin_top = -54.0
-margin_right = -280.0
+margin_right = -92.5
 margin_bottom = -36.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="7Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -75.0
+margin_left = -37.5
 margin_top = -54.0
-margin_right = -50.0
+margin_right = -12.5
 margin_bottom = -36.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="8Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 145.0
+margin_left = 42.5
 margin_top = -54.0
-margin_right = 170.0
+margin_right = 67.5
 margin_bottom = -36.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="9Button" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 365.0
+margin_left = 122.5
 margin_top = -54.0
-margin_right = 390.0
+margin_right = 147.5
 margin_bottom = -36.0
-rect_scale = Vector2( 6, 6 )
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SmileButton" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -535.0
-margin_top = 106.0
-margin_right = -510.0
-margin_bottom = 124.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -197.5
+margin_top = 56.0
+margin_right = -172.5
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="KingButton" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -305.0
-margin_top = 106.0
-margin_right = -280.0
-margin_bottom = 124.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -117.5
+margin_top = 56.0
+margin_right = -92.5
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BridgeButton" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = -75.0
-margin_top = 106.0
-margin_right = -50.0
-margin_bottom = 124.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -37.5
+margin_top = 56.0
+margin_right = -12.5
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CactusButton" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 145.0
-margin_top = 106.0
-margin_right = 170.0
-margin_bottom = 124.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 42.5
+margin_top = 56.0
+margin_right = 67.5
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="EyeButton" type="TextureButton" parent="CenterContainer/Control"]
-margin_left = 365.0
-margin_top = 106.0
-margin_right = 409.0
-margin_bottom = 124.0
-rect_scale = Vector2( 6, 6 )
+margin_left = 122.5
+margin_top = 56.0
+margin_right = 166.5
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
 texture_normal = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MenuCenter" type="CenterContainer" parent="."]
-anchor_top = 0.8
+anchor_top = 0.7
 anchor_right = 0.25
 anchor_bottom = 0.8
-margin_bottom = -4.0
+margin_right = -0.249992
+margin_bottom = -18.0
 rect_scale = Vector2( 4, 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MenuButton" type="TextureButton" parent="MenuCenter"]
-margin_left = 134.0
-margin_right = 186.0
-margin_bottom = 18.0
+margin_left = 24.0
+margin_top = 18.0
+margin_right = 76.0
+margin_bottom = 36.0
 rect_pivot_offset = Vector2( 26, 9 )
 texture_normal = SubResource( 16 )
 __meta__ = {

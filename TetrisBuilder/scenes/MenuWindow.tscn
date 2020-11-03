@@ -16,12 +16,12 @@ region = Rect2( 1, 1, 44, 18 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1, 22, 78, 18 )
+region = Rect2( 1, 24, 78, 18 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 148, 22, 93, 18 )
+region = Rect2( 146, 24, 93, 18 )
 
 [node name="MenuWindowControl" type="Control"]
 anchor_right = 1.0
@@ -31,26 +31,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TetrisBuilder" type="TextureRect" parent="."]
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 227.0
-margin_bottom = 118.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 4, 4 )
-texture = SubResource( 1 )
-expand = true
-stretch_mode = 6
+[node name="TetrisBuilder" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.22
+margin_right = 3.05176e-05
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayButton" type="TextureButton" parent="."]
-margin_left = 100.0
-margin_top = 200.0
-margin_right = 144.0
-margin_bottom = 218.0
+[node name="TetrisBuilder" type="Control" parent="TetrisBuilder"]
+margin_left = 202.0
+margin_top = 79.0
+margin_right = 202.0
+margin_bottom = 79.0
+
+[node name="TetrisBuilder" type="TextureRect" parent="TetrisBuilder/TetrisBuilder"]
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 3, 3 )
+texture = SubResource( 1 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="CenterContainer" parent="."]
+anchor_top = 0.22
+anchor_right = 1.0
+anchor_bottom = 0.48
+margin_top = -1.49829
+margin_bottom = -11.4983
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Control" parent="PlayButton"]
+margin_left = 202.0
+margin_top = 88.0
+margin_right = 202.0
+margin_bottom = 88.0
+
+[node name="PlayButton" type="TextureButton" parent="PlayButton/PlayButton"]
+margin_left = -88.0
+margin_top = -36.0
+margin_right = -44.0
+margin_bottom = -18.0
 rect_scale = Vector2( 4, 4 )
 action_mode = 0
 texture_normal = SubResource( 2 )
@@ -58,26 +84,60 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SettingsButton" type="TextureButton" parent="."]
-margin_left = 100.0
-margin_top = 300.0
-margin_right = 178.0
-margin_bottom = 318.0
+[node name="SettingsButton" type="CenterContainer" parent="."]
+anchor_top = 0.48
+anchor_right = 1.0
+anchor_bottom = 0.74
+margin_right = 3.05176e-05
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Control" parent="SettingsButton"]
+margin_left = 202.0
+margin_top = 88.0
+margin_right = 202.0
+margin_bottom = 88.0
+
+[node name="SettingsButton" type="TextureButton" parent="SettingsButton/SettingsButton"]
+margin_left = -156.0
+margin_top = -36.0
+margin_right = -78.0
+margin_bottom = -18.0
 rect_scale = Vector2( 4, 4 )
 action_mode = 0
 texture_normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="SupportUsButton" type="TextureButton" parent="."]
-margin_left = 100.0
-margin_top = 400.0
-margin_right = 193.0
-margin_bottom = 418.0
+[node name="SupportUsButton" type="CenterContainer" parent="."]
+anchor_top = 0.74
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SupportUsButton" type="Control" parent="SupportUsButton"]
+margin_left = 202.0
+margin_top = 94.0
+margin_right = 202.0
+margin_bottom = 94.0
+
+[node name="SupportUsButton" type="TextureButton" parent="SupportUsButton/SupportUsButton"]
+margin_left = -184.0
+margin_top = -36.0
+margin_right = -91.0
+margin_bottom = -18.0
 rect_scale = Vector2( 4, 4 )
 action_mode = 0
 texture_normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="SupportUsButton" to="." method="_on_SupportUsButton_pressed"]
+[connection signal="pressed" from="PlayButton/PlayButton/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="SettingsButton/SettingsButton/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="SupportUsButton/SupportUsButton/SupportUsButton" to="." method="_on_SupportUsButton_pressed"]
