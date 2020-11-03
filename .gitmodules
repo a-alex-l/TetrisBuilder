@@ -1,3 +1,15 @@
 [submodule "godot-cpp"]
 	path = godot-cpp
 	url = https://github.com/godotengine/godot-cpp.git
+[submodule "godot-admob"]
+	path = godot-admob
+	url = https://github.com/kloder-games/godot-admob.git
+[submodule "Godot-Android-Admob-Plugin"]
+	path = Godot-Android-Admob-Plugin
+	url = https://github.com/Shin-NiL/Godot-Android-Admob-Plugin.git
+[submodule "GodotAds"]
+	path = GodotAds
+	url = https://github.com/FrogSquare/GodotAds
+[submodule "GodotSql"]
+	path = GodotSql
+	url = https://github.com/FrogSquare/GodotSql

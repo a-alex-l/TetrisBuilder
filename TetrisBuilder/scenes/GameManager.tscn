@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/MenuWindow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/GameMangerControl.gd" type="Script" id=4]
+
+[node name="GameManagerControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuWindowControl" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.5
