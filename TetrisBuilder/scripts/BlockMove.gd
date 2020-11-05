@@ -18,6 +18,7 @@ func _input(event):
 				dragging = false
 				if (collision_now):
 					get_parent().make_new_block()
+		print(dragging)
 
 
 	if (event is InputEventScreenDrag):

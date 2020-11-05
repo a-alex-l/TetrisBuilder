@@ -1,3 +1,4 @@
+.idea/
 .sconsign.dblite
 /TetrisBuilder/.import/
-/TetrisBuilder/static/Firebase.gd
+/TetrisBuilder/android/build/AndroidManifest.xml

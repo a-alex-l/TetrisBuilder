@@ -34,8 +34,8 @@
 
         <!-- XR mode metadata. This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
         <meta-data
-            android:name="xr_mode_metadata_name"
-            android:value="xr_mode_metadata_value" />
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="HERE" />
 
         <activity
             android:name=".GodotApp"

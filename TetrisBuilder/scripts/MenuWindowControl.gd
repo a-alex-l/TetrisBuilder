@@ -6,6 +6,7 @@ var AdMobDict = Dictionary()
 var GodotAds
 
 func _init():
+	return
 	GodotAds = Engine.get_singleton("GodotAds")
 	GodotAds.init(get_instance_id())
 	AdMob = GodotAds.get_singleton("AdMob")
@@ -25,5 +26,6 @@ func _on_SettingsButton_pressed():
 	get_parent().replace_scene(load("res://scenes/Settings.tscn").instance())
 
 func _on_SupportUsButton_pressed():
+	return
 	if (AdMob.is_rewarded_video_loaded()):
 		AdMob.show_rewarded_video()

@@ -31,8 +31,8 @@ func change_to_rigid():
 
 func make_new_block():
 	tower_peak = min(tower_peak, current_block.get_global_position().y)
+	change_to_rigid()
 	if (remaining_blocks != 0):
-		change_to_rigid()
 		add_kinematic()
 	remaining_update()
 		

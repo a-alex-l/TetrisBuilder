@@ -1,5 +1,8 @@
 extends Camera2D
 
+func _ready():
+	move(Vector2(0, -100))
+
 func move(speed):
 	position += speed
 	get_parent().get_child(1).set_position(

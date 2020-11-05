@@ -19,3 +19,6 @@
 [submodule "TetrisBuilder/modules/GodotAds"]
 	path = TetrisBuilder/modules/GodotAds
 	url = https://github.com/FrogSquare/GodotSql
+[submodule "godot"]
+	path = godot
+	url = https://github.com/godotengine/godot.git
