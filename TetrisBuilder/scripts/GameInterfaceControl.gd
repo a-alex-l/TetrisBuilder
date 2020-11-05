@@ -9,9 +9,12 @@ func _on_RightTurnButton_pressed():
 	$Zero.current_block.turn_block_right()
 
 func _on_Pause_pressed():
-	$Zero.paused = true
 	
-	$Zero.paused = false
+	var scene = load("res://scenes/Pause.tscn").instance()
+	scene.set_position($Camera.get_global_position())
+	scene.rect_scale = $Camera.scale
+	get_tree().paused = true
+	get_parent().add_small_scene(scene)
 	
 func block_fell(fallen_blocks):
 	if   (fallen_blocks == 1):

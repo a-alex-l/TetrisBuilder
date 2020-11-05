@@ -1,12 +1,3 @@
 .sconsign.dblite
-Godot.64
-SConstruct
-/godot-cpp/
 /TetrisBuilder/.import/
-/src/gdlibrary.os
-/src/BlockMove.os
-/src/BlocksManager.os
-/src/GroundMove.os
-/src/Levels.os
-/src/StrikeOutCollision.os
-/TetrisBuilder/bin/x11/libgdexample.so
+/TetrisBuilder/static/Firebase.gd

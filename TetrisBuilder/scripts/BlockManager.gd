@@ -16,12 +16,9 @@ func get_random(r_from, r_to):
 	return random.randi_range(r_from, r_to)
 	
 func add_kinematic():
-	current_block_s_number = str(get_random(0, 2))
+	current_block_s_number = str(get_random(0, 6))
 	current_block = load("res://scenes/blocks/Block " +
 		current_block_s_number + " KinematicBody.tscn").instance()
-	print(camera.get_viewport().size.x)
-	print(camera.get_viewport().size.y)
-	print()
 	current_block.set_global_position(Vector2(0, tower_peak - 360))
 	add_child(current_block)
 
@@ -42,9 +39,7 @@ func make_new_block():
 func remaining_update():
 	remaining_blocks -= 1
 	if (remaining_blocks == -1):
-		print("May be win")
-		yield(get_tree().create_timer(3), "timeout")
-		print("win")
+		yield(get_tree().create_timer(5), "timeout")
 		get_parent().game_end("res://scenes/Victory.tscn")
 	get_parent().update_remaining_blocks(remaining_blocks)
 

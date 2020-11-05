@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GameIcon 192x192.png-d21568d6fce0a4e37168e12f4658de66.stex"
+path="res://.import/LevelsWindow.png-409483989b1892b5ec1a17a716784e0a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Game icons and screenshots/GameIcon 192x192.png"
-dest_files=[ "res://.import/GameIcon 192x192.png-d21568d6fce0a4e37168e12f4658de66.stex" ]
+source_file="res://graphics/Game icons and screenshots/LevelsWindow.png"
+dest_files=[ "res://.import/LevelsWindow.png-409483989b1892b5ec1a17a716784e0a.stex" ]
 
 [params]
 
