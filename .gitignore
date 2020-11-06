@@ -1,4 +1,5 @@
 .idea/
 .sconsign.dblite
-/TetrisBuilder/.import/
-/TetrisBuilder/android/build/AndroidManifest.xml
+TetrisBuilder/.import/
+TetrisBuilder/android/build/AndroidManifest.xml
+TetrisBuilder/android/build/
