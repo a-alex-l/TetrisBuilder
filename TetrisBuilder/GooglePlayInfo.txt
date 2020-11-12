@@ -1,0 +1,37 @@
+ASO Analize docs: https://docs.google.com/spreadsheets/d/125O6jqZTT9BvW8znfPHTpFPRQQzJud6gpnjytbkpEqc/edit?usp=sharing
+
+
+Found out by Aleksei Lesnik.
+
+
+App name:
+Tower Construction : Build Tricky Puzzle Towers UP
+50 / 50
+
+Short description:
+Craft & Build Tower from Tetris® Blocks. Rise Physics Building in Endless Mode
+77 / 80
+
+Full description:
+Welcome in Tower Construction!
+One of the best 2D Tower Building Game!
+
+Our Main Advantages:
+	1. Free game.
+	2. No Violence. Only Kids content.
+	3. Simple Gameplay.
+	4. Customization.
+	5. Intuitive block shape. Like in game Tetris®.
+	6. Incredible Zoom and Free Cam movment.
+	7. No Hurry. You can analize the situation.
+
+How to Play:
+Main games task place blocks one on others and build Highest Tower or out all blocks.
+	1. You can Move tetris's Block by dragging it.
+	2. You can Move Cam by dragging background.
+	3. You can Rotate Block by screen buttons ↺ and ↻.
+	4. You can Zoom the field by screen buttons + and -.
+	5. To put block you nedd to release block in touch with others.
+
+The game provides Standert Mode and Endless Mode.
+734 / 4000

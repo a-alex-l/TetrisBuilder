@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://graphics/Interface.png" type="Texture" id=1]
 [ext_resource path="res://scripts/MenuWindowControl.gd" type="Script" id=2]
-[ext_resource path="res://admob-lib/admob.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -139,12 +138,6 @@ texture_normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AdMob" type="Node" parent="."]
-script = ExtResource( 3 )
-rewarded_id = "ca-app-pub-4581790896026954/2255926859"
 [connection signal="pressed" from="PlayButton/PlayButton/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="SettingsButton/SettingsButton/SettingsButton" to="." method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="SupportUsButton/SupportUsButton/SupportUsButton" to="." method="_on_SupportUsButton_pressed"]
-[connection signal="rewarded" from="AdMob" to="." method="_on_AdMob_rewarded"]
-[connection signal="rewarded_video_loaded" from="AdMob" to="." method="_on_AdMob_rewarded_video_loaded"]

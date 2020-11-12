@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var dragging = false
+var have_dragged = false
 var collision_now = false
 
 var camera
@@ -10,6 +11,7 @@ func _ready():
 
 func _input(event):
 	if (event is InputEventScreenTouch):
+		dragging = have_dragged
 		if (!dragging && (event.position * camera.scale +
 					camera.get_global_position() - position).length() < 150):
 			dragging = true
@@ -18,11 +20,12 @@ func _input(event):
 				dragging = false
 				if (collision_now):
 					get_parent().make_new_block()
-		print(dragging)
+		have_dragged = false
 
 
 	if (event is InputEventScreenDrag):
 		if (dragging):
+			have_dragged = true
 			var move_vector = (event.position * camera.scale +
 					camera.get_global_position() - position) * 20
 			move_and_slide(move_vector,

@@ -99,10 +99,10 @@ __meta__ = {
 
 [node name="LeftTurnButton" type="TextureButton" parent="Interface/LeftSide"]
 margin_left = 10.0
-margin_top = 602.0
+margin_top = 620.0
 margin_right = 31.0
-margin_bottom = 620.0
-rect_scale = Vector2( 6, 6 )
+margin_bottom = 638.0
+rect_scale = Vector2( 5, 5 )
 texture_normal = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -113,7 +113,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 31.0
 margin_bottom = 28.0
-rect_scale = Vector2( 5, 5 )
+rect_scale = Vector2( 4, 4 )
 texture_normal = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -121,10 +121,10 @@ __meta__ = {
 
 [node name="Heart1" type="TextureRect" parent="Interface/LeftSide"]
 margin_left = 10.0
-margin_top = 250.0
+margin_top = 290.0
 margin_right = 27.0001
-margin_bottom = 263.0
-rect_scale = Vector2( 4, 4 )
+margin_bottom = 303.0
+rect_scale = Vector2( 3, 3 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -132,10 +132,10 @@ __meta__ = {
 
 [node name="Heart2" type="TextureRect" parent="Interface/LeftSide"]
 margin_left = 10.0
-margin_top = 310.0
+margin_top = 340.0
 margin_right = 27.0001
-margin_bottom = 323.0
-rect_scale = Vector2( 4, 4 )
+margin_bottom = 353.0
+rect_scale = Vector2( 3, 3 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -143,10 +143,10 @@ __meta__ = {
 
 [node name="Heart3" type="TextureRect" parent="Interface/LeftSide"]
 margin_left = 10.0
-margin_top = 370.0
+margin_top = 390.0
 margin_right = 27.0001
-margin_bottom = 383.0
-rect_scale = Vector2( 4, 4 )
+margin_bottom = 403.0
+rect_scale = Vector2( 3, 3 )
 texture = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -164,55 +164,55 @@ __meta__ = {
 }
 
 [node name="RightTurnButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -136.0
-margin_top = 602.0
-margin_right = -115.0
-margin_bottom = 620.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -115.0
+margin_top = 620.0
+margin_right = -94.0
+margin_bottom = 638.0
+rect_scale = Vector2( 5, 5 )
 texture_normal = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlusButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -110.0
-margin_top = 240.0
-margin_right = -89.0
-margin_bottom = 258.0
-rect_scale = Vector2( 5, 5 )
+margin_left = -94.0
+margin_top = 280.0
+margin_right = -73.0
+margin_bottom = 298.0
+rect_scale = Vector2( 4, 4 )
 texture_normal = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MinusButton" type="TextureButton" parent="Interface/RightSide"]
-margin_left = -110.0
-margin_top = 340.0
-margin_right = -89.0
-margin_bottom = 358.0
-rect_scale = Vector2( 5, 5 )
+margin_left = -94.0
+margin_top = 370.0
+margin_right = -73.0
+margin_bottom = 388.0
+rect_scale = Vector2( 4, 4 )
 texture_normal = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BlockPicture" type="TextureRect" parent="Interface/RightSide"]
-margin_left = -90.0
-margin_top = 10.0
-margin_right = -79.0
-margin_bottom = 26.0
-rect_scale = Vector2( 6, 6 )
+margin_left = -75.0
+margin_top = 15.0
+margin_right = -64.0
+margin_bottom = 31.0
+rect_scale = Vector2( 4, 4 )
 texture = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CountRemainBlock" type="Label" parent="Interface/RightSide"]
-margin_left = -235.0
+margin_left = -185.0
 margin_top = 30.0
-margin_right = -200.0
+margin_right = -150.0
 margin_bottom = 45.0
-rect_scale = Vector2( 4, 4 )
+rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-5ef3e134ec6fe7e9789c413d742d731b.stex"
+path="res://.import/GameIcon432x432.png-6ec7ff0e7b06f27694d0f82957ea543c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://admob-lib/icon.png"
-dest_files=[ "res://.import/icon.png-5ef3e134ec6fe7e9789c413d742d731b.stex" ]
+source_file="res://graphics/Game icons and screenshots/GameIcon432x432.png"
+dest_files=[ "res://.import/GameIcon432x432.png-6ec7ff0e7b06f27694d0f82957ea543c.stex" ]
 
 [params]
 
